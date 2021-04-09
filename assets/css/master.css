@@ -31,6 +31,7 @@ body{
   font-size: 5em;
   color: #fff;
   margin-bottom: 30px;
+  margin-top: -20px;
 }
 
 .flip-card{
@@ -98,7 +99,15 @@ select{
   outline: 0;
   width: 200px;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: #fff;
   background-color: #27292A;
+}
+
+
+label{
+  font-size: 1.1em;
+  color: #fff;
+  margin-bottom: 6px;
+  margin-top: -10px;
 }

@@ -11,12 +11,13 @@
   </head>
   <body>
     <div id="root">
-      <h1>collezione vinili</h1>
+      <h1>collezione di vinili</h1>
+      <label for="cars">Seleziona il genere:</label>
       <select class="disk-selection"
       name="disk-selection"
       v-model="genre">
-        <option value="rock">Tutti i generi</option>
-        <option value="rock">Rock</option>
+        <option value="all">Tutti i generi</option>
+        <option value="rock" selected>Rock</option>
         <option value="jazz">Jazz</option>
         <option value="pop">Pop</option>
         <option value="metal">Metal</option>
@@ -33,7 +34,7 @@
                 <p></p>
                 <p class="author">{{disk.author}}</p>
                 <p class="genre">{{disk.genre}}</p>
-              </div>              
+              </div>
             </div>
 
           </div>
