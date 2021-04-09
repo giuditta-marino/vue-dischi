@@ -9,16 +9,21 @@ body{
 }
 
 #root{
+  height: 100vh;
   background-color: #27292A;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container{
+  margin-top: 50px;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   background-color: #27292A;
-  width: 200px;
+  width: 1000px;
 }
 
 .flip-card{
@@ -31,7 +36,7 @@ body{
 
 .flip-card .flip-card-front{
   background-size: cover;
-
+  background-position: center;
 }
 
 .flip-card .flip-card-inner {
@@ -63,6 +68,10 @@ body{
   padding-top: 80px;
 }
 
-.select{
+select{
   outline: 0;
+  width: 100px;
+  text-align: center;
+  color: #fff;
+  background-color: #27292A;
 }

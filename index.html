@@ -11,7 +11,9 @@
   </head>
   <body>
     <div id="root">
-      <select class="diskselection" name="diskselection">
+      <select class="disk-selection"
+      name="disk-selection"
+      v-model="genre">
         <option value="rock">Rock</option>
         <option value="jazz">Jazz</option>
         <option value="pop">Pop</option>
@@ -24,9 +26,9 @@
             <div class="flip-card-front" :style="`background-image: url('${disk.poster}')`">
             </div>
             <div class="flip-card-back">
-              <h3 class="title-year">New Jersey, 1988</h3>
-              <p class="author">Bon Jovi</p>
-              <p class="genre">Rock</p>
+              <h3 class="title-year">{{disk.title}} , {{disk.year}}</h3>
+              <p class="author">{{disk.author}}</p>
+              <p class="genre">{{disk.genre}}</p>
             </div>
 
           </div>
