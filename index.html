@@ -11,9 +11,11 @@
   </head>
   <body>
     <div id="root">
+      <h1>collezione vinili</h1>
       <select class="disk-selection"
       name="disk-selection"
       v-model="genre">
+        <option value="rock">Tutti i generi</option>
         <option value="rock">Rock</option>
         <option value="jazz">Jazz</option>
         <option value="pop">Pop</option>
@@ -26,9 +28,12 @@
             <div class="flip-card-front" :style="`background-image: url('${disk.poster}')`">
             </div>
             <div class="flip-card-back">
-              <h3 class="title-year">{{disk.title}} , {{disk.year}}</h3>
-              <p class="author">{{disk.author}}</p>
-              <p class="genre">{{disk.genre}}</p>
+              <div class="text">
+                <h3 class="title-year">{{disk.title}} , {{disk.year}}</h3>
+                <p></p>
+                <p class="author">{{disk.author}}</p>
+                <p class="genre">{{disk.genre}}</p>
+              </div>              
             </div>
 
           </div>

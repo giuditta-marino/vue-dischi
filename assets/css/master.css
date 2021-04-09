@@ -26,6 +26,13 @@ body{
   width: 1000px;
 }
 
+#root h1{
+  text-transform: uppercase;
+  font-size: 5em;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
 .flip-card{
   background-color: transparent;
   width: 200px;
@@ -61,17 +68,37 @@ body{
   backface-visibility: hidden;
 }
 
+.flip-card-back .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flip-card-front, .flip-card-back .title-year{
+  margin-bottom: 6px;
+}
+
+.flip-card-front, .flip-card-back .author{
+  font-style: oblique;
+  margin-bottom: 6px;
+}
+
+.flip-card-front, .flip-card-back .genre{
+  font-weight: 800;
+}
+
 .flip-card-back{
   background-color: #fff;
   color: #27292A;
   transform: rotateY(180deg);
-  padding-top: 80px;
 }
 
 select{
   outline: 0;
-  width: 100px;
+  width: 200px;
   text-align: center;
+  font-size: 1.2em;
   color: #fff;
   background-color: #27292A;
 }
