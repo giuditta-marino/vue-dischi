@@ -12,19 +12,21 @@
   <body>
     <div id="root">
       <h1>collezione di vinili</h1>
-      <label for="cars">Seleziona il genere:</label>
+      <label for="cars">Seleziona il genere: {{selectedGenre}}</label>
       <select class="disk-selection"
       name="disk-selection"
-      v-model="genre">
-        <option value="all">Tutti i generi</option>
-        <option value="rock" selected>Rock</option>
+      v-model="selectedGenre"
+      @change="onChange(event)"
+    >
+        <option value="all" selected>Tutti i generi</option>
+        <option value="rock">Rock</option>
         <option value="jazz">Jazz</option>
         <option value="pop">Pop</option>
         <option value="metal">Metal</option>
       </select>
       <div class="container">
         <div class="flip-card"
-             v-for="disk in disks">
+             v-for="disk in selectedDisks">
           <div class="flip-card-inner">
             <div class="flip-card-front" :style="`background-image: url('${disk.poster}')`">
             </div>
