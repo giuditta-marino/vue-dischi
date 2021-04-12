@@ -3,7 +3,7 @@ Vue.config.devtools = true;
 var app = new Vue({
   el: '#root',
   data:{
-    selectedGenre: "",
+    selectedGenre: "all",
     disks: [],
     selectedDisks: []
   },
@@ -17,6 +17,7 @@ var app = new Vue({
       axios.get('https://flynn.boolean.careers/exercises/api/array/music')
         .then((response) => {
           this.disks = response.data.response;
+          this.selectedDisks = this.disks;
           console.log(this.disks);
         });
     },
@@ -28,12 +29,11 @@ var app = new Vue({
       let selected = event.target.value.toLowerCase();
 
       if (selected == "all") {
-        console.log('notok');
+        console.log(selected);
         this.selectedDisks = this.disks;
         console.log(this.selectedDisks)
 
       } else {
-        console.log('ok');
         console.log(this.disks);
         console.log(selected);
         console.log(this.selectedDisks);
@@ -44,38 +44,10 @@ var app = new Vue({
         })
         console.log(this.selectedDisks);
       }
-      //   console.log(jazzDisks);
-      //   this.disks = jazzDisks;
-      //   console.log(this.disks);
-      // } else if (event.target.value == "pop") {
-      //   console.log(disks);
-      //   this.disks = disks;
-      //   console.log(this.disks);
-      //   const popDisks = this.disks.filter((disk, index) =>{
-      //     return disk.genre == "Pop"
-      //   })
-      //   console.log(popDisks);
-      //   this.disks = popDisks;
-      //   console.log(this.disks);
-      // } else if (event.target.value == "metal") {
-      //   const metalDisks = this.disks.filter((disk, index) =>{
-      //     return disk.genre == "Metal"
-      //   })
-      //   console.log(this.disks);
-      //   console.log(metalDisks);
-      //   this.disks = metalDisks;
-      //   console.log(this.disks);
-      // } else if (event.target.value == "rock") {
-      //   const rockDisks = this.disks.filter((disk, index) =>{
-      //     return disk.genre == "Rock"
-      //   })
-      //   console.log(rockDisks);
-      //   this.disks = rockDisks;
-      //   console.log(this.disks);
-      // }
+
     }
 
-    // cin jquery si faceva così
+    // con jquery si faceva così
    //  let selected = $(this).val();
      //
      // let datiFiltered;
